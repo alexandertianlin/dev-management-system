@@ -12,28 +12,33 @@
 
 [technical behaviour, data flow, and key operations]
 
-## What are our Integration Points?
+## Integration Points
 
-[What existing systems does this touch?]
+[What existing systems does this touch? APIs, databases, services]
 
 ## Core Design Decisions
 
-[Any architectural choices and rationale]
+[Architectural choices and rationale — why this approach over alternatives]
 
-## What are our constraints?
+## Constraints
 
-[Unique considerations, things to avoid, touchpoints we must hit ]
+[Unique considerations, things to avoid, touchpoints we must hit]
 
-## What edge cases do we need to handle?
+## Edge Cases
 
-[ What scenarios might be forgotten? ]
+[What scenarios might be forgotten? Error states, boundary conditions]
 
-## How do we test this?
+## Testing Strategy
 
-[How will we verify this works?]
+[How will we verify this works? Unit, integration, e2e]
 
-## What failures need handling?
+## Failure Handling
 
-[What happens when this breaks?]
+[What happens when this breaks? Graceful degradation, error recovery]
 
----
+## Files to Modify
+
+| File | Action | Reason |
+|------|--------|--------|
+| path/to/file.py | modify | [reason] |
+| path/to/new.py | create | [reason] |

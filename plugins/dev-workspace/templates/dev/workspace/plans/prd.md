@@ -14,30 +14,42 @@
 
 ## Goals
 
-[What exactly are we building and why should it exist in the product?]
+[Specific, measurable objectives for this feature]
 
-## Non-Goals
+## User Stories
 
-[Explicitly not doing, out of scope, future considerations]
-
-## User Journeys
-
-[Who are the actors? What's their journey?]
+- As a **[user type]**, I want to **[action]** so that **[benefit]**
+- As a **[user type]**, I want to **[action]** so that **[benefit]**
 
 ## Functional Requirements
 
-**Must Have's:**
+### Must Have
+1. The system must **[requirement]**
+2. The system must **[requirement]**
 
-**Should Have's:**
+### Should Have
+1. The system should **[requirement]**
 
-**Nice to Have:**
+### Nice to Have
+1. The system could **[requirement]**
+
+## Non-Goals (Out of Scope)
+
+- This feature will NOT include **[exclusion]**
+- This feature will NOT include **[exclusion]**
 
 ## Success Metrics
 
-[How you'll measure success]
+[How will we measure success? e.g. "Reduce X by Y%", "Improve Z score to N"]
+
+## Design Considerations
+
+[UI/UX requirements, component libraries, styling conventions]
+
+## Technical Considerations
+
+[Dependencies, architecture notes, constraints, performance requirements]
 
 ## Open Questions
 
-[Questions that need resolution or research, Any risks or uncertainties, Edge cases]
-
----
+[Questions needing resolution, risks, uncertainties, edge cases]

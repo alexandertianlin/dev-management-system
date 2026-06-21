@@ -18,11 +18,19 @@ Branch workspace context for Claude and humans. Not read by the dev-workspace sc
 
 %% Claude: write a brief purpose statement when creating the workspace %%
 
-## Workflow
+## Workflow Mode
 
-- [ ] Quick (direct implementation)
+- [ ] Quick (direct implementation, no PRD needed)
 - [ ] Single plan (plan once, execute)
 - [ ] Multi-stage plan (iterative planning)
+
+## Quality Gates Status
+
+- [ ] PRD approved (`dev/workspace/plans/prd.md`)
+- [ ] Architecture designed (`dev/workspace/plans/architectural.md`)
+- [ ] Task list created (`dev/workspace/tasks/README.md`)
+- [ ] All tasks verified (secrets, tests, conventions)
+- [ ] Session memory saved (`dev/workspace/history/`)
 
 ## Track Issues
 
@@ -36,11 +44,15 @@ Branch workspace context for Claude and humans. Not read by the dev-workspace sc
 
 ## Plans
 
-If selected please read the file at the start of the session before starting work
+Read at session start before working:
 
 - [ ] `dev/workspace/plans/prd.md`
-- [ ] `dev/workspace/plans/architecture.md`
-- [ ] `dev/workspace/context/discover.md`
+- [ ] `dev/workspace/plans/architectural.md`
+- [ ] `dev/workspace/context/tree.md`
+
+## Completed Tasks
+
+_Tick tasks in `dev/workspace/tasks/README.md` as you complete them._
 
 ## Discoveries
 

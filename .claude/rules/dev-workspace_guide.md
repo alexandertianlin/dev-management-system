@@ -1,93 +1,68 @@
 # Dev-Workspace Guidance
 
-This project uses **dev-workspace**, an integrated toolset for AI agents to operate efficiently and consistently inside this project directory.
+This project uses **dev-workspace**, an integrated toolset for AI agents.
 
-# IMPORTANT!!!
+## IMPORTANT
 
 **TRUST THE DEV-WORKSPACE SKILL AND COMMANDS.** Use dev-workspace commands to manage your workspace.
 
 ## Concept
 
-dev-workspace creates isolated workspaces to keep work and context (plans, docs, etc) scoped to the task at hand. Work can then be shared back to the central project safely and effectively. Many separate workspaces can be active at any time across concurrent sessions (multi-dev compatible) by using intelligent branch setup.
-Centralised snapshots (archives) of all workspaces, accessible project wide, allow high level insights. A CLI speeds up and makes all the actions needed to operate the dev-workspace system a pleasure to use.
+dev-workspace creates isolated workspaces to keep work and context scoped to the task at hand.
 
 ## State
-dev-workspace keeps work and context syncronised, isolated, searchable across the whole project repository. It is important to keep the state of the workspace updated and fresh.
-Ask for the user's guidance when these milestones are reached: 
 
-**Starting new feature / fix** --> Create a new workspace, push to remote to initiate branch, setup any workspace configs and context (in workspace.md)
-**Starting new work** --> Sync the workspace with parent branch. Check that previous work is recorded and saved. 
-**Work finished** --> Merge changes back to parent, Archive if needed, commit workspace files. push work to remote.
-**major features completed** --> Work finished protocol, deploy push if needed. 
+Ask for user guidance at these milestones:
+- **Starting new feature** → Create workspace, set up WORKSPACE.md
+- **Starting new work** → Sync workspace, check saved context
+- **Work finished** → Merge back, archive, commit workspace
+- **Major features** → Work finished + quality gates passed
 
-## Tools
+## MANDATORY DEVELOPMENT WORKFLOW
 
-### Workspace Commands
+ALL development tasks MUST follow this pipeline:
 
-**CLI command suite** enabling great productivity and consistency when dev-workspace is active in a project, this is true for both humans and agents. These commands consolidate and link together common (git, gh, file and tree) commands in a way that is not possible normally. Workspaces rely heavily on the CLI for the system to work effectively.
+### Phase 0: Workspace Setup
+- Create or verify `dev/workspace/` structure
+- Read `dev/workspace/WORKSPACE.md` for branch context
 
-**Core Commands**
+### Phase 1: PRD & Plan
+- For any feature > 30 min: start with a PRD
+- Write to `dev/workspace/plans/prd.md`
+- Get user approval before implementing
 
-- init: Scaffold, apply, and refresh (--update) workspace configs
-- new: Create or list workspace branches
-- push: Push current branch to remote server
-- sync: Sync changes from parent branch
-- merge: Merge current branch back to parent
-- commit: Automatically commit workspace files only
-- archive: Archive workspace context
-- latest: Integrate changes from upstream/origin to main
-- transfer-latest: Transfer latest changes to parent branch (fork repos only)
-- deploy: Deploy push workflow
-- cleanup: Process conversation exports and other tasks
-- tree: Generate directory trees for context
-- help: Show help info
+### Phase 2: Task Breakdown
+- Create task list with checkboxes in `dev/workspace/tasks/README.md`
+- Work one task at a time, tick as you go
 
-### Preloaded Context
+### Phase 3: Quality Gates
+- Check `quality-gates` rule before every commit
+- Verify: no secrets, no debug logging, tests pass, conventions followed
 
-You have been seeded with context generated from **dev-workspace**.
+### Phase 4: Implement
+- One sub-task at a time
+- Tick checkboxes: `- [ ]` → `- [x]`
 
-- **Tree** -> project overview: The default project tree view that gives you visibility over the core areas of the project. Some projects come with named tree views, for specific overviews, find these with `dev-workspace tree --show`
-- **workspace/workspace.md**: The requirements and key info to kick off and complete tasks in this workspace. Shows any active issues, testing requirements, planning strategy, workspace purpose, etc.
+### Phase 5: Commit
+- Conventional Commits format
+- Logical commit boundaries
 
-### Skills
+### Phase 6: Memory
+- Update WORKSPACE.md with progress
+- Save session summary to `dev/workspace/history/`
 
-- **dev-workspace** — Core CLI for efficient and consistent workspace management.
-- **dev-deploy** — Kamal deployment pipelines (staging/production)
-- **magic-reply** — Trigger-based response styles
+## Workspace Directories
+- **context/** — Project context and discoveries
+- **plans/** — PRD and architecture docs
+- **tasks/** — Task lists with checkboxes ✓
+- **history/** — Session summaries
+- **reviews/** — Review artifacts
+- **research/** — Research output
+- **filebox/** — Temporary files
 
-### Workspace Directories
+## Skills Added
+- **quality-gates** — Code quality enforcement (secrets, tests, conventions)
+- **prd-planner** — PRD-driven planning with template
 
-Workspaces are Claude's primary source of truth. Prioritise searching and revealing workspace knowledge before focusing directly on the codebase.
-
-- **`/context`** — Discoveries, resources, and other contextual information
-- **`/filebox`** — Temporary file location, store snippets
-- **`/history`** — Conversations with Claude, invaluable for searches
-- **`/plans`** — Structured planning documents
-- **`/research`** — Research artefacts
-- **`/reviews`** — Reviews of completed work
-- **`/tasks`** — Tasks to complete, may contain instructions for Claude
-
-### Archives
-
-Archived workspaces live in `dev/branches/`. These are snapshots of completed branch context, visible from any branch. Check archives for prior context before starting work in a scope.
-
-### Chat Histories
-
-Each workspace has all previous conversations with claude recorded in the `/history` directory.
-Conversations from other workspaces can be found in the `dev/branches/` directory, in the workspace snapshot
-
-Each history file has a max 5-line summary near the top and a descriptive filename. This enables agents to easily search chat histories by date or topic:
-
-    [SUMMARY]
-    >>>
-    "The summary of the conversation is here"
-    <<<
-
-## Abbreviations & Chat references
-
-The user may use the following abbreviations or terms to refer to the dev-workspace system:
-- `dw` --> simple abreviation of "dev-workspace"
-- `the workspace`, `our workspace` --> dev-workspace is active. It refers to the "state" of the files and folders in the dev-workspace directory.  
-**examples**:
-- User sais: "lets get our workspace in order" --> run commands to bring the workspace in its proper state as per the config file. eg local branches pushed, archives updated (if config), workspace synced. work merged back to parent branch). 
-- User sais: "dw needs syncing" --> run dev-workspace command that syncs the workspace.
+## Chat Histories
+Each workspace has conversations recorded in `/history`. Each history file has a max 5-line summary near the top.

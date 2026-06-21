@@ -45,3 +45,15 @@ If selected please read the file at the start of the session before starting wor
 ## Discoveries
 
 - %% Claude: record discoveries here as you work %%
+
+## Quality Gates Status
+
+- [ ] PRD approved (`dev/workspace/plans/prd.md`)
+- [ ] Architecture designed (`dev/workspace/plans/architectural.md`)
+- [ ] Task list created (`dev/workspace/tasks/README.md`)
+- [ ] All tasks verified (secrets, tests, conventions)
+- [ ] Session memory saved (`dev/workspace/history/`)
+
+## Completed Tasks
+
+_Tick tasks in `dev/workspace/tasks/README.md` as you complete them._
