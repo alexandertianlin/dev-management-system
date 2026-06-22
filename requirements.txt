@@ -1,0 +1,3 @@
+﻿pyyaml>=6.0
+# enforce_check.py and auto_heal.py are self-contained (stdlib only)
+# This file exists for future extensibility

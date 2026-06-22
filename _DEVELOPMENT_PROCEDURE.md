@@ -225,7 +225,7 @@ memory/{task-id}/memory-{YYYYMMDD}.md
 
 见 .github/workflows/ci-cd.yml
 
----
+-
 
 ## 8. 违规处理
 
@@ -234,3 +234,15 @@ memory/{task-id}/memory-{YYYYMMDD}.md
 违规场景包括：未注册任务、未编写 _TASK_SPEC.md / _VERSION_SPEC.md、文件未按目录分类、模型文件未放入 models/、未记录 Memory、版本号不符合规范、CI 未通过善自合并。
 
 > 最后更新: 2026-06-18 | 版本: v3.0.0
+
+## 9. Git Push 规范
+
+Agent 在完成 commit 后必须自动输出标准化的 git push 命令：
+
+`cmd
+cd /d C:\Users\tianl\Documents\Codex\<仓库路径>\
+git push origin <分支名>
+`
+
+禁止让用户询问如何推送。此命令应与 cd /d 同样作为 Agent 输出的标准格式。
+---

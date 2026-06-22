@@ -1,0 +1,30 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Config with sensitive info
+configs/*.json
+!configs/*.template.json
+
+# Output files
+outputs/
+results/
+
+# Logs
+*.log
+
+# Git
+.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

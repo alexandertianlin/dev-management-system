@@ -1,4 +1,4 @@
-
+﻿
 # Codex / Agent 启动检查流程
 
 > **本文档定义了 Codex（或任何 AI Agent）在接手一个开发任务时必须执行的自检流程。**
@@ -61,7 +61,8 @@ flowchart TD
 - [ ] 更新 _TASK_SPEC.md 中的版本状态
 - [ ] 更新 _TASK_REGISTRY.md 中的任务/版本状态
 - [ ] 写入 memory/task-{name}/memory-{YYYYMMDD}.md
-- [ ] 运行 scripts/enforce_check.py（如有）验证合规性
+- [ ] 运行 scripts/enforce_check.py（如存在）验证合规性
+- [ ] 输出标准化 git push 命令（格式见 _DEVELOPMENT_PROCEDURE.md 3.5）（如有）验证合规性
 - [ ] 提交代码时遵循 Angular Commit 规范
 ```
 

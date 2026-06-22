@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Dev Workspace
 
 > A Claude Code plugin for shaping, storing, building and revealing the context that Claude generates and consumes while working on a codebase.
@@ -147,3 +148,81 @@ Don't be surprised if velocity climbs, Claude's quality jumps, and reusable cont
 ## Instructions
 
 Once installed and initialised, your project's `dev/workspace/README.md` is the full logistical reference — setup, the complete command cookbook, the directory system, hooks and lifecycle.
+=======
+﻿# Development Governance System / 开发治理系统
+
+> Automated compliance, skill/memory management, and CI/CD pipeline for Codex-based development.
+> 面向 Codex 的自动化开发合规管理、技能/记忆治理及 CI/CD 流水线。
+
+## What is this?
+
+A **governance layer** that sits above individual development tasks and ensures:
+- Every task follows a standardized lifecycle (register → plan → develop → verify → archive)
+- Every version has proper documentation (`_TASK_SPEC.md` + `_VERSION_SPEC.md`)
+- Every file is in the correct directory structure
+- Skills are reusable and cross-task
+- Memory is persistent and task-isolated
+- Compliance violations trigger automatic or enforced penalties
+
+## Architecture
+
+```
+dev-management-system/      ← This repo
+├── _DEVELOPMENT_PROCEDURE.md    ← Master procedure
+├── _ENFORCEMENT.md              ← Violation penalties (L1-L4)
+├── _AGENTS_INTEGRATION.md       ← Codex startup checklist
+├── _TASK_REGISTRY.md            ← Global task database
+├── _INTEGRATION_MANIFEST.md     ← Integration records
+├── .github/workflows/ci-cd.yml  ← CI/CD pipeline
+├── scripts/
+│   ├── enforce_check.py         ← Compliance engine (pass@N + auto-heal)
+│   └── auto_heal.py             ← Auto-fix tool
+├── configs/                     ← Templates
+├── benchmark/                   ← Performance measurements
+├── Makefile                     ← One-click automation
+├── AGENTS.md                    ← Codex entry point
+└── README.md                    ← This file
+```
+
+## Quick Start
+
+```bash
+# 1. View all tasks
+python scripts/enforce_check.py
+
+# 2. Run compliance check with auto-heal (pass@3)
+python scripts/enforce_check.py --pass-n 3 --heal
+
+# 3. Using Make
+make setup   # Install dependencies
+make check   # Run compliance check
+make heal    # Check + auto-fix + verify
+make ci      # Full CI pipeline (pass@3 + heal)
+```
+
+## Key Features
+
+| Feature | Command | Description |
+|---------|---------|-------------|
+| Compliance check | `enforce_check.py` | Scans all tasks for violations (C-01 to C-08) |
+| Auto-heal | `auto_heal.py` | Fixes missing dirs, docs, and memory files |
+| pass@N | `--pass-n N` | Requires N consecutive passes |
+| L1-L4 enforcement | `_ENFORCEMENT.md` | Warning → Stop → Rollback → Terminate |
+| Task registration | `_TASK_REGISTRY.md` | Global task database with version tracking |
+| Skill library | `../skills/` | Reusable atomic skills with Pydantic I/O |
+| Memory library | `../memory/` | Persistent task memory with timestamps |
+
+## Integration with AGENTS.md
+
+Add to your `~/.codex/AGENTS.md`:
+
+```markdown
+## 开发管理流程强制指令
+### 管理系统根目录
+C:\Users\tianl\Documents\Codex\dev-management-system\
+### 强制规则
+...
+```
+
+See `AGENTS.md` and `_AGENTS_INTEGRATION.md` for details.
+>>>>>>> be66e29 (docs: add README, AGENTS.md, .gitignore, configs, benchmark, deployment guide, Makefile)

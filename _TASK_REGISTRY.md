@@ -26,7 +26,10 @@
  | task-hand-tracking | v1.1-feat-calibration-20260605 | ChArUco 标定�?RGB-D 对齐 | 2026-06-05 | completed |
  | task-hand-tracking | v1.2-feat-depthfusion-20260610 | 深度图融合优�?| 2026-06-10 | in_progress |
  | task-hand-tracking | v2.0-feat-d435i-hand-20260621 | D435i + MediaPipe Hand 基础检测 | 2026-06-21 | completed
- | task-hand-tracking | v2.1-feat-unity-bridge-20260621 | D435i + MediaPipe Hand -> Unity UDP bridge | 2026-06-21 | completed | |
+ | task-hand-tracking | v2.1-feat-unity-bridge-20260621 | D435i + MediaPipe Hand -> Unity UDP bridge | 2026-06-21 | completed
+ | task-hand-tracking | v2.2-feat-direct-hand-control-20260621 | MediaPipe 直接驱骨（独立脚本,端口5056）| 2026-06-21 | in_progress
+ | task-hand-tracking | v2.3-feat-fingersolver-integration-20260621 | MediaPipe -> FingerSolver 管线集成（端口5057）| 2026-06-21 | in_progress | |
+ | task-hand-tracking | v2.2-feat-mediapipe-control-20260621 | [已替代] MediaPipe -> FingerSolver IK 管线集成 | 2026-06-21 | paused | | |
  | task-hand-tracking | v2.0-feat-unity-20260620 | Unity 集成（暂缓，等待基础版本完成）| 2026-06-20 | paused |
  | task-model-training | v1.0-feat-yolo-20260601 | YOLOv8 基线训练 | 2026-06-01 | completed |
  | task-model-training | v1.1-feat-quant-20260608 | FP16/INT8 量化 | 2026-06-08 | in_progress |
